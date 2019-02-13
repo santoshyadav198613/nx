@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "id": "SchematicsAzureMongoDB",
+  "title": "Create MongoDB Configuration",
+  "type": "object",
+  "properties": {
+    "project": {
+      "description": "The name of the project.",
+      "type": "string",
+      "x-prompt": "Name of the project you want to use the database in?"
+    },
+    "envName": {
+      "description": "The name of the deployment env.",
+      "type": "string",
+      "x-prompt": "Name of the deployment env?"
+    },
+    "azureDbName": {
+      "description": "The name of the database.",
+      "type": "string",
+      "x-prompt": "Name of the database?"
+    }
+  },
+  "required": [
+    "project", "azureDbName"
+  ]
+}

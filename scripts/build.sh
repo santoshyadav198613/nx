@@ -3,7 +3,7 @@
 npx ng-packagr -p packages/nx/ng-package.json
 
 rm -rf build
-./node_modules/.bin/ngc
+./node_modules/.bin/tsc
 
 #Nx client side lib
 rm -rf build/packages/nx
@@ -33,10 +33,12 @@ rm -rf build/packages/nx/spec
 cp README.md build/packages/builders
 cp README.md build/packages/schematics
 cp README.md build/packages/nx
+cp README.md build/packages/azure
 cp LICENSE build/packages/bazel
 cp LICENSE build/packages/builders
 cp LICENSE build/packages/schematics
 cp LICENSE build/packages/nx
+cp LICENSE build/packages/azure
 
 echo "Nx libraries available at build/packages:"
 ls build/packages

@@ -15,18 +15,9 @@ find $NPM_DEST -maxdepth 1 -name *.tgz -delete
 # We are running inside of a child_process, so we need to reauth
 npm adduser
 
-for package in $NPM_DEST/*/
-do
-
-  PACKAGE_DIR="$(basename ${package})"
-  cd $NPM_DEST/$PACKAGE_DIR
-
-  PACKAGE_NAME=`node -e "console.log(require('./package.json').name)"`
-
-  echo "Publishing ${PACKAGE_NAME}@${VERSION} --tag ${TAG}"
-  npm publish --tag $TAG --access public
-
-  cd $ORIG_DIRECTORY
-done
+cd build/npm/azure
+PACKAGE_NAME=`node -e "console.log(require('./package.json').name)"`
+echo "Publishing ${PACKAGE_NAME}@${VERSION} --tag ${TAG}"
+npm publish --tag $TAG --access public
 
 echo "Publishing complete"

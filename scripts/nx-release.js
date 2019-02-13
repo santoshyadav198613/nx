@@ -137,10 +137,7 @@ const options = {
    */
   pkgFiles: [
     'package.json',
-    'build/npm/bazel/package.json',
-    'build/npm/builders/package.json',
-    'build/npm/nx/package.json',
-    'build/npm/schematics/package.json'
+    'build/npm/azure/package.json'
   ],
   increment: parsedVersion.version,
   requireUpstream: false,
