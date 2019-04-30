@@ -9,12 +9,12 @@ import {
   getAffectedApps,
   getAffectedLibs,
   getAffectedProjects,
+  getAffectedProjectsWithTarget,
   getAllAppNames,
   getAllLibNames,
+  getAllProjectNamesWithTarget,
   getProjectNames,
   parseFiles,
-  getAllProjectNamesWithTarget,
-  getAffectedProjectsWithTarget,
   readAngularJson
 } from './shared';
 import { generateGraph } from './dep-graph';
